@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.1.2'
+
+gem 'dotenv-rails', :groups => [:development, :test]
+
 gem 'rails', '4.1.2'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
@@ -16,6 +19,7 @@ gem 'pg'
 gem 'sendgrid'
 gem 'simple_form'
 gem 'thin'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
@@ -24,12 +28,14 @@ group :development do
   gem 'quiet_assets'
   gem 'rails_layout'
 end
+
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'pry-rails'
   gem 'pry-rescue'
   gem 'rspec-rails'
 end
+
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
